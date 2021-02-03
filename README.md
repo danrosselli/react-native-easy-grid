@@ -1,4 +1,4 @@
-# React Native Easy Grid 🐵
+# React Native Paper Grid 🐵
 ![Master Build Status](https://travis-ci.org/GeekyAnts/react-native-easy-grid.svg?branch=master) <br />
 
 This is NOT-JUST-ANOTHER-GRID-LAYOUT library! We are trying to simplify flexbox with easier approach.
