@@ -1,53 +1,30 @@
-'use strict';
+import React, { Component } from 'react';
+import {View} from 'react-native';
 
-import React, {Component} from 'react';
-import {View, TouchableOpacity, StyleSheet} from 'react-native';
-import computeProps from '../Utils/computeProps';
-
-
-export default class ColumnNB extends Component {
-    prepareRootProps() {
-
-        var flattenedStyle = StyleSheet.flatten(this.props.style)
-
-        var type = {
-        	flexDirection: 'column',
-        	flex: (this.props.size) ? this.props.size : (flattenedStyle && flattenedStyle.width) ? 0 : 1,
-        }
-
-        var defaultProps = {
-            style: type
-        }
-        return computeProps(this.props, defaultProps);
-
-    }
-
-    setNativeProps(nativeProps) {
-      this._root.setNativeProps(nativeProps);
-    }
+export default class Col extends Component {
 
   render() {
-    if(this.props.onPress){
-      return(
-        <TouchableOpacity onPress={this.props.onPress}
-        {...this.prepareRootProps()}>
-    <View
-      ref={component => this._root = component}
-      {...this.props}
-      {...this.prepareRootProps()}
-    >{this.props.children}</View>
-      </TouchableOpacity>
-    );
-    }
-    else{
-      return(
-        <View
-      ref={component => this._root = component}
-      {...this.props}
-      {...this.prepareRootProps()}
-    >{this.props.children}</View>
-    );
-    }
-  }
 
+    const types = {
+      'default' : { flexDirection: 'column', alignItems: 'stretch'},
+      'inline' : { flexDirection: 'row', alignItems: 'center'},
+    };
+
+    let type = types.default;
+
+    if (this.props.inline)
+      type = types.inline;
+
+    return (
+      <View style={{
+        flexDirection: type.flexDirection,
+        alignItems: type.alignItems,
+        flex: this.props.size || 1,
+        padding: 3,
+        ...this.props.style,
+      }}>
+        {this.props.children}
+      </View>
+    );
+  }
 }
