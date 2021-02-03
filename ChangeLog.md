@@ -1,4 +1,4 @@
-# [0.2.0](https://github.com/GeekyAnts/react-native-easy-grid/releases/tag/v0.2.0)
+# [0.2.0]()
 
 ### Updated Features
 

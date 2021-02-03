@@ -1,4 +1,4 @@
-declare module "react-native-easy-grid" {
+declare module "react-native-paper-grid" {
 
     import {Component} from "react";
     import {ViewProperties} from "react-native";
