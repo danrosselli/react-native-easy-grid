@@ -1,7 +1,9 @@
 # React Native Paper Grid 🐵
 ![Master Build Status](https://travis-ci.org/GeekyAnts/react-native-easy-grid.svg?branch=master) <br />
 
-This is NOT-JUST-ANOTHER-GRID-LAYOUT library! We are trying to simplify flexbox with easier approach.
+This is to be used with the react-native-paper library UI.
+The repo is a fork from a great job of the  GeekyAnts/react-native-easy-grid.
+My ugrade was create a padding system like the material UI library from web, and make the components more easier to position.
 
 ## Installation
 
