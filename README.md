@@ -1,5 +1,5 @@
 # React Native Paper Grid 🐵
-![Master Build Status](https://travis-ci.org/GeekyAnts/react-native-easy-grid.svg?branch=master) <br />
+UNDER DEVELOPMENT - DONT'T USE!!
 
 Grid layout for the react-native-paper library UI.
 The repo is a fork from a great job of the  GeekyAnts/react-native-easy-grid.
