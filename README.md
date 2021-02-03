@@ -1,9 +1,8 @@
 # React Native Paper Grid 🐵
-UNDER DEVELOPMENT - DONT'T USE!!
+WARNING!! THIS LIB IS UNDER DEVELOPMENT!! DON'T USE IN AMBIENT PRODUCTION!
 
-Grid layout for the react-native-paper library UI.
-The repo is a fork from a great job of the  GeekyAnts/react-native-easy-grid.
-My upgrade was create a padding system like the material UI library from web, and make the components more easier to position.
+This is a small and easy grid layout for the react-native-paper library UI.
+The ideas is to make the components more easier to position.
 
 ## Installation
 
@@ -19,39 +18,68 @@ npm install react-native-paper-grid --save
 import { Col, Row, Grid } from "react-native-paper-grid";
 ```
 
-### 1. Two columns (50% and 50%)
+### 1. One column (100%)
 
 ```
 <Grid>
+  <Row>
+    <Col></Col>
+  </Row>
+</Grid>
+```
+
+### 2. Two columns (50% and 50%)
+
+```
+<Grid>
+  <Row>
     <Col></Col>
     <Col></Col>
+  </Row>
 </Grid>
 ```
 
 ![col-50-50](Examples/col-50-50.png "Column 50% and 50% example")
 
-
-
 > Note: If you don't assign the size property, it defaults to equal width (or height) with its siblings
 
-### 2. Two rows
+### 3. Three columns (33.33% each)
 
 ```
 <Grid>
-    <Row></Row>
-    <Row></Row>
+  <Row>
+    <Col></Col>
+    <Col></Col>
+    <Col></Col>
+  </Row>
+</Grid>
+```
+![col-33-33-33](Examples/col-33-33-33.png "Column 33.33% each")
+
+### 4. Two rows
+
+```
+<Grid>
+    <Row>
+      <Col></Col>
+    </Row>
+    <Row>
+      <Col></Col>
+    </Row>
 </Grid>
 ```
 
 ![row-50-50](Examples/row-50-50.png "Row 50% and 50% example")
 
 
-### 3. Two rows (75% and 25%)
+### 5. Two cols (75% and 25%)
 
 ```
 <Grid>
-    <Row size={75}></Row>
-    <Row size={25}></Row>
+  <Row>
+    <Col size={75}></Col>
+    <Col size={25}></Col>
+  </Row>
 </Grid>
 ```
 
@@ -59,8 +87,10 @@ This is exactly same as
 
 ```
 <Grid>
-    <Row size={3}></Row>
-    <Row size={1}></Row>
+  <Row>
+    <Col size={3}></Col>
+    <Col size={1}></Col>
+  </Row>
 </Grid>
 ```
 
@@ -68,90 +98,73 @@ This is exactly same as
 
 > Same concept applies to `<Col />`
 
-
-### 4. Three columns (33.33% each)
+### 6. Inline components
 
 ```
 <Grid>
-    <Col></Col>
-    <Col></Col>
-    <Col></Col>
+  <Row>
+    <Col inline>
+      <RadioButton
+        value="first"
+        status={'unchecked' }
+        onPress={() => {}}
+      />
+      <Text>Radio Button 1</Text>
+    </Col>
+    <Col inline>
+      <RadioButton
+        value="second"
+        status={'unchecked' }
+        onPress={() => {}}
+      />
+      <Text>Radio Button 2</Text>
+    </Col>
+  </Row>
 </Grid>
 ```
-![col-33-33-33](Examples/col-33-33-33.png "Column 33.33% each")
 
-### 5. Three rows (50%, 25% and 25%)
-
-```
-<Grid>
-    <Row size={2}></Row>
-    <Row size={1}></Row>
-    <Row size={1}></Row>
-</Grid>
-```
-
-![row-50-25-25](Examples/row-50-25-25.png "Row 50%, 25% and 50% example")
-
-### 6. Nested Layout or Grid
-
-<table width="100" height="100">
-    <tr>
-        <td rowspan="2" bgcolor="red" width="50">1</td>
-        <td bgcolor="yellow" width="50" height="50">2</td>
-    </tr>
-    <tr>
-        <td bgcolor="blue">3</td>
-    </tr>
-</table>
+### 7. Nested Layout or Grid
 
 ```
 <Grid>
+  <Row>
     <Col>
         <Text>1</Text>
     </Col>
     <Col>
         <Row>
+          <Col>
             <Text>2</Text>
+          </Col>
         </Row>
         <Row>
+          <Col>
             <Text>3</Text>
+          </Col>
         </Row>
     </Col>
+  </Row>
 </Grid>
 ```
 
 ![complex](Examples/complex.png "Complex and Nested Layouts")
 
-
-
-### 7. Fixed width and fluid width combination
+### 8. Fixed width and fluid width combination
 
 ```
 <Grid>
-    <Col style={{ width: 40 }}>
+  <Row>
+    <Col fixedWidth={60}>
         <Text>Fixed width</Text>
     </Col>
     <Col>
         <Text>Fluid width</Text>
     </Col>
+  </Row>
 </Grid>
 ```
 
 ![col-fluid-fixed.png](Examples/col-fluid-fixed.png "Column fluid and fixed example")
-
-
-### 8. Fixed height and fluid height combination
-
-```
-<Grid>
-    <Row style={{ height: 40 }}>
-        <Text>Fixed width</Text>
-    </Row>
-    <Row>
-        <Text>Fluid width</Text>
-    </Row>
-</Grid>
-```
 
 
 # Important note about usage with `<ScrollView />`
