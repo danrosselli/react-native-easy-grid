@@ -128,8 +128,6 @@ This is exactly same as
           <Col>
             <Text>2</Text>
           </Col>
-        </Row>
-        <Row>
           <Col>
             <Text>3</Text>
           </Col>
