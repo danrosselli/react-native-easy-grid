@@ -153,7 +153,6 @@ This is exactly same as
 </Grid>
 ```
 
-Do you think anything could be simpler than that? This repo is part of our bigger project called [NativeBase.io](http://nativebase.io). Do check that!
 
 # Important note about usage with `<ScrollView />`
 
