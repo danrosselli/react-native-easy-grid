@@ -1,7 +1,7 @@
 {
-  "name": "react-native-easy-grid",
-  "description": "Easy React Native Layout & Grid for the Dumb",
-  "version": "0.2.2",
+  "name": "react-native-paper-grid",
+  "description": "React Native Grid for Native Paper",
+  "version": "0.1.0",
   "private": false,
   "dependencies": {
     "lodash": "^4.17.15"
@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GeekyAnts/react-native-easy-grid.git"
+    "url": "https://github.com/danrosselli/react-native-paper-grid.git"
   },
   "main": "index.js"
 }
