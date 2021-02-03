@@ -6,7 +6,7 @@ This is NOT-JUST-ANOTHER-GRID-LAYOUT library! We are trying to simplify flexbox 
 ## Installation
 
 ```
-npm install react-native-easy-grid --save
+npm install react-native-paper-grid --save
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ npm install react-native-easy-grid --save
 ### Include the components
 
 ```
-import { Col, Row, Grid } from "react-native-easy-grid";
+import { Col, Row, Grid } from "react-native-paper-grid";
 ```
 
 ### 1. Two columns (50% and 50%)
