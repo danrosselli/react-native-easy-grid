@@ -3,7 +3,7 @@
 
 Grid layout for the react-native-paper library UI.
 The repo is a fork from a great job of the  GeekyAnts/react-native-easy-grid.
-My uggrade was create a padding system like the material UI library from web, and make the components more easier to position.
+My upgrade was create a padding system like the material UI library from web, and make the components more easier to position.
 
 ## Installation
 
