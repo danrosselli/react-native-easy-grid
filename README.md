@@ -39,8 +39,6 @@ import { Col, Row, Grid } from "react-native-paper-grid";
 </Grid>
 ```
 
-![col-50-50](Examples/col-50-50.png "Column 50% and 50% example")
-
 > Note: If you don't assign the size property, it defaults to equal width (or height) with its siblings
 
 ### 3. Three columns (33.33% each)
@@ -54,7 +52,6 @@ import { Col, Row, Grid } from "react-native-paper-grid";
   </Row>
 </Grid>
 ```
-![col-33-33-33](Examples/col-33-33-33.png "Column 33.33% each")
 
 ### 4. Two rows
 
@@ -68,9 +65,6 @@ import { Col, Row, Grid } from "react-native-paper-grid";
     </Row>
 </Grid>
 ```
-
-![row-50-50](Examples/row-50-50.png "Row 50% and 50% example")
-
 
 ### 5. Two cols (75% and 25%)
 
@@ -93,8 +87,6 @@ This is exactly same as
   </Row>
 </Grid>
 ```
-
-![row-75-25](Examples/row-75-25.png "Row 75% and 25% example")
 
 > Same concept applies to `<Col />`
 
@@ -147,14 +139,12 @@ This is exactly same as
 </Grid>
 ```
 
-![complex](Examples/complex.png "Complex and Nested Layouts")
-
 ### 8. Fixed width and fluid width combination
 
 ```
 <Grid>
   <Row>
-    <Col fixedWidth={60}>
+    <Col width={60}>
         <Text>Fixed width</Text>
     </Col>
     <Col>
@@ -163,9 +153,6 @@ This is exactly same as
   </Row>
 </Grid>
 ```
-
-![col-fluid-fixed.png](Examples/col-fluid-fixed.png "Column fluid and fixed example")
-
 
 # Important note about usage with `<ScrollView />`
 

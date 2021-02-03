@@ -17,9 +17,9 @@ export default class Col extends Component {
     if (this.props.inline)
       type = types.inline;
 
-    if (this.props.fixedWidth) {
+    if (this.props.width) {
       flex = 0;
-      width = this.props.fixedWidth;
+      width = this.props.width;
     }
 
     return (
