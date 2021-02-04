@@ -13,6 +13,11 @@ export default class Col extends Component {
     let type = types.default;
     let flex = this.props.size || 1;
     let width = '100%';
+    let pad = 3;
+
+    if (this.props.nopad) {
+      pad = 0;
+    }
 
     if (this.props.inline)
       type = types.inline;
@@ -28,7 +33,7 @@ export default class Col extends Component {
         alignItems: type.alignItems,
         flex: flex,
         width: width,
-        padding: 3,
+        padding: pad,
         ...this.props.style,
       }}>
         {this.props.children}

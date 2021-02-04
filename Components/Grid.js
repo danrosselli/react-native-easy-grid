@@ -10,6 +10,7 @@ export default class Grid extends Component {
 				flexDirection: 'column',
 				flex: 0,
         padding: 6,
+				height: '100%',
         ...this.props.style
       }}>
         {this.props.children}

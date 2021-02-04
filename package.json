@@ -1,7 +1,7 @@
 {
   "name": "react-native-paper-grid",
   "description": "React Native Grid for React Native Paper",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
   "dependencies": {},
   "scripts": {
