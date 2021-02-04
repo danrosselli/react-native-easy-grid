@@ -1,8 +1,8 @@
 # React Native Paper Grid 🐵
-WARNING!! THIS LIB IS UNDER DEVELOPMENT!! DON'T USE IN AMBIENT PRODUCTION!
+WARNING!! THIS LIB IS UNDER DEVELOPMENT!! DON'T USE IT IN AMBIENT PRODUCTION!
 
 This is a small and easy grid layout for the react-native-paper library UI.
-The ideas is to make the components more easier to position.
+The idea is to make the components more easier to position.
 
 ## Installation
 
@@ -27,6 +27,7 @@ import { Col, Row, Grid } from "react-native-paper-grid";
   </Row>
 </Grid>
 ```
+> For default all components will be stretched to width of the <Col>. If you don't want this use the 'inline' prop
 
 ### 2. Two columns (50% and 50%)
 
@@ -39,7 +40,7 @@ import { Col, Row, Grid } from "react-native-paper-grid";
 </Grid>
 ```
 
-> Note: If you don't assign the size property, it defaults to equal width (or height) with its siblings
+> Note: If you don't assign the size property, it defaults to equal width with its siblings
 
 ### 3. Three columns (33.33% each)
 
@@ -121,21 +122,49 @@ This is exactly same as
 <Grid>
   <Row>
     <Col>
-        <Text>1</Text>
+      <Row nopad>
+        <Col inline nopad>
+          <Checkbox
+            status={'unchecked'}
+            onPress={() => {}}
+          />
+          <Text>Checkbox 1</Text>
+        </Col>
+      </Row>
+      <Row nopad>
+        <Col inline nopad>
+          <Checkbox
+            status={'unchecked'}
+            onPress={() => {}}
+          />
+          <Text>Checkbox 2</Text>
+        </Col>
+      </Row>
     </Col>
     <Col>
-        <Row>
-          <Col>
-            <Text>2</Text>
-          </Col>
-          <Col>
-            <Text>3</Text>
-          </Col>
-        </Row>
+      <Row nopad>
+        <Col inline nopad>
+          <Checkbox
+            status={'unchecked'}
+            onPress={() => {}}
+          />
+          <Text>Checkbox 1</Text>
+        </Col>
+      </Row>
+      <Row nopad>
+        <Col inline nopad>
+          <Checkbox
+            status={'unchecked'}
+            onPress={() => {}}
+          />
+          <Text>Checkbox 2</Text>
+        </Col>
+      </Row>
     </Col>
   </Row>
 </Grid>
 ```
+> 'nopad' prop is to be used when you don't need the internal padding of the <Col> or <Row>
 
 ### 8. Fixed width and fluid width combination
 
@@ -151,7 +180,3 @@ This is exactly same as
   </Row>
 </Grid>
 ```
-
-# Important note about usage with `<ScrollView />`
-
-> Note: If you're using `<Row />` inside a `<ScrollView />`, the height of the <Row /> component would be flexible according to the content, though you can always apply the `height` styling.
