@@ -14,6 +14,7 @@ export default class Col extends Component {
     let flex = this.props.size || 1;
     let width = '100%';
     let pad = 3;
+    let justifyContent = 'flex-start';
 
     if (this.props.nopad) {
       pad = 0;
@@ -21,6 +22,12 @@ export default class Col extends Component {
 
     if (this.props.inline)
       type = types.inline;
+
+    if (this.props.right)
+      justifyContent = 'flex-end';
+
+    if (this.props.center)
+      justifyContent = 'center';
 
     if (this.props.width) {
       flex = 0;
@@ -34,6 +41,7 @@ export default class Col extends Component {
         flex: flex,
         width: width,
         padding: pad,
+        justifyContent: justifyContent,
         ...this.props.style,
       }}>
         {this.props.children}

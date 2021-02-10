@@ -9,10 +9,20 @@ export default class Row extends Component {
       pad = 0;
     }
 
+    let flex = this.props.size || 0;
+    let alignItems = 'flex-start';
+
+    if (this.props.verticalCenter)
+      alignItems = 'center';
+
+    if (this.props.verticalBottom)
+      alignItems = 'flex-end';
+
     return (
       <View style={{
         flexDirection: 'row',
-        flex: 0,
+        flex: flex,
+        alignItems: alignItems,
         padding: pad,
         ...this.props.style
       }}>
